@@ -1,0 +1,74 @@
+.participate {
+  padding: 69px 11.5%;
+
+  @include vp-767 {
+    padding: 0 24px;
+  }
+
+  &__main-wrapper {
+    position: relative;
+    padding: 81px 40px 91px;
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    background-color: $color-default-white;
+
+    @include vp-767 {
+      display: block;
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    top: -78px;
+    left: -50px;
+    width: 635px;
+    height: 600px;
+
+    @include vp-767 {
+      display: none;
+    }
+
+    img {
+      width: 635px;
+      height: 600px;
+      object-fit: cover;
+    }
+  }
+
+  &__text-wrapper {
+    grid-column: 2 / 3;
+    width: 500px;
+    margin-left: 11px;
+
+    @include vp-767 {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    h2 {
+      margin: 0;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 100%;
+
+      @include vp-767 {
+        font-size: 32px;
+        line-height: 120%;
+      }
+    }
+
+    p {
+      margin: 0;
+
+      @include vp-767 {
+        font-size: 16px;
+        line-height: 135%;
+      }
+    }
+  }
+}

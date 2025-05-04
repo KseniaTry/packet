@@ -1,0 +1,162 @@
+.hero {
+  padding: 25px 0 100px;
+
+  @include vp-767 {
+    padding: 20px 0 30px;
+  }
+
+  // фон
+  &__background-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    @include vp-767 {
+      width: 100%;
+      height: 480px;
+    }
+  }
+
+  &__background-desktop {
+    width: 1440px;
+    height: 655px;
+
+    @include vp-767 {
+      display: none;
+    }
+
+    img {
+      width: 1440px;
+      height: 655px;
+      object-fit: cover;
+    }
+  }
+
+  &__background-mobile {
+    width: 100%;
+    height: 480px;
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+  }
+
+  // основной контект блока
+  &__main-wrapper {
+    margin: 0;
+
+    @include vp-767 {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__title-wrapper {
+    margin-bottom: 40px;
+    width: 480px;
+
+    @include vp-767 {
+      padding: 0 6.6%;
+      width: 100%;
+      order: 1;
+    }
+
+    h2 {
+      margin: 0;
+
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 70px;
+      letter-spacing: -2px;
+      color: $color-accent-main;
+
+      @include vp-767 {
+        margin: 0;
+        font-size: 48px;
+        line-height: 100%;
+        color: $color-default-white;
+      }
+    }
+  }
+
+  &__text-wrapper {
+    width: 480px;
+
+    @include vp-767 {
+      padding: 0 6.6%;
+      width: 100%;
+      order: 3;
+    }
+
+    p {
+      margin-bottom: 40px;
+
+      @include vp-767 {
+        font-size: 18px;
+        line-height: 135%;
+        order: 3;
+      }
+    }
+  }
+
+  // чекбокс
+  &__checkbox-wrapper {
+    margin-bottom: 16px;
+  }
+
+  &__checkbox-link {
+    color: $color-accent-main;
+    text-decoration: underline;
+
+    p {
+      display: inline;
+    }
+  }
+
+  // кнопка
+  &__button {
+    width: 327px;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  // изображение
+  &__image-wrapper {
+    position: absolute;
+    top: 0;
+    right: size(161px);
+
+    width: 654px;
+    height: 649px;
+
+    @include vp-767 {
+      position: static;
+      order: 2;
+      width: 100%;
+      height: 340px;
+    }
+
+    img {
+      width: 654px;
+      height: 649px;
+      object-fit: contain;
+
+      @include vp-767 {
+        width: 100%;
+        height: 340px;
+      }
+    }
+  }
+}

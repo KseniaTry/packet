@@ -1,21 +1,28 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
+  display: block;
+  padding: size(15px) size(50px);
 
-  color: $color-default-white;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 110%;
+  text-align: center;
 
-  background-color: $color-neon-blue;
+  color: $color-accent-main;
+
+  background-color: rgb(215, 229, 252);
+  border-radius: 12px;
   border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  @include vp-767 {
+    padding: 15px 50px;
   }
 
   &:disabled {
-    opacity: 0.5;
+    color: #BAC1C7;
+    background-color: #FCFCFC;
 
     pointer-events: none;
   }
