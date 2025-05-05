@@ -1,0 +1,33 @@
+mixin lottery-card(options = {})
+
+  - const title = options.title ? options.title : false
+  - const text = options.text ? options.text : false
+  - const backgroundColor = options.backgroundColor ? options.backgroundColor : ""
+  - const infoIcon = options.includeInfoIcon ? true : false
+  - const includeExtraInfo = options.includeExtraInfo
+  - const extraInfo = options.extraInfo ? options.extraInfo : ""
+  - const extraInfoColor = options.extraInfoColor ? options.extraInfoColor : ""
+  - const includeInfoIcon = options.includeInfoIcon
+  - const memberLogoSrc = options.memberLogoSrc ? options.memberLogoSrc : false
+  - const memberLogoWidth = options.memberLogoWidth ? options.memberLogoWidth : false
+  - const memberLogoHeight = options.memberLogoHeight ? options.memberLogoHeight : false
+  - const memberLogoAlt = options.memberLogoAlt ? options.memberLogoAlt : ""
+  - const imagePath = options.imagePath ? options.imagePath : false
+  - const imageName = options.imageName ? options.imageName : false
+  - const imageType = options.imageType ? options.imageType : false
+  - const imageAlt = options.imageAlt ? options.imageAlt : ""
+
+  article.lottery-card(data-class="lottery-card" data-color= backgroundColor)
+    .lottery-card__text-wrapper
+      .lottery-card__logo-wrapper
+        img(src= memberLogoSrc, width=memberLogoWidth, height=memberLogoHeight, alt=memberLogoAlt)
+      if includeInfoIcon
+        .lottery-card__info-icon-wrapper
+          +icon("info-icon", 24, 24)
+      if includeExtraInfo
+        .lottery-card__extra-info-wrapper(data-class="extra-info" data-color= extraInfoColor)
+          p= extraInfo
+      h2= title
+      h3= text
+    .lottery-card__image-wrapper
+      +img(imagePath, imageName, imageType, imageAlt)

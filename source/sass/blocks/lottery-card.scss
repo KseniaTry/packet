@@ -1,0 +1,68 @@
+.lottery-card {
+  position: relative;
+  padding: 10px;
+  border-radius: 12px;
+  width: 156px;
+  height: 204px;
+  color: $color-nero;
+
+
+  &__text-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &>h2 {
+      margin-bottom: 5px;
+      font-size: 16px;
+      line-height: 126%;
+      font-weight: 700;
+    }
+
+    &>h3 {
+      margin-top: 0;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 500;
+    }
+  }
+
+  &__logo-wrapper {
+    min-width: 28px;
+    max-width: 104px;
+    height: 24px;
+
+    img {
+      min-width: 28px;
+      max-width: 104px;
+      height: 24px;
+      object-fit: contain;
+    }
+  }
+
+  &__info-icon-wrapper {
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__extra-info-wrapper {
+    p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 126%;
+      font-weight: 700;
+    }
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

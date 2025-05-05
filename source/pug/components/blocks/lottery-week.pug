@@ -1,0 +1,120 @@
+mixin lottery-week()
+
+  -
+    const lotteryCards = [
+      {
+        period: "Меньше 3 месяцев",
+        titleColor: "#48ABD3",
+        backgroundColor: "$lottery-card-first",
+        cards: [
+          {
+            title: "3000 баллов «X5 Клуба»",
+            text: "Меньше 3 месяцев",
+            backgroundColor: "#a6f663",
+            includeExtraInfo: true,
+            extraInfo: "300 призов",
+            extraInfoColor: "#5FAF2C",
+            includeInfoIcon: false,
+            memberLogoSrc: "img/content/members-logo/x5-logo.svg",
+            memberLogoWidth: 28,
+            memberLogoHeight: 24,
+            memberLogoAlt: "Логотип X5",
+            imagePath: "slides/lottery-week/slide1",
+            imageName: "star-and-coin",
+            imageType: "png",
+            imageAlt: "Изображение улыбающихся звезды и монеты",
+          }
+        ]
+      },
+      {
+        period: "От 3 до 6 месяцев",
+        titleColor: "#4891D3",
+        backgroundColor: "$lottery-card-second",
+        cards: [
+          {
+            title: "Чайники",
+            text: "От 3 до 6 месяцев",
+            backgroundColor: "#c6ebdd",
+            includeExtraInfo: false,
+            includeInfoIcon: true,
+            memberLogoSrc: "img/content/members-logo/citilink-logo.svg",
+            memberLogoWidth: 104,
+            memberLogoHeight: 24,
+            memberLogoAlt: "Логотип Ситилинк",
+            imagePath: "slides/lottery-week/slide2",
+            imageName: "kettle",
+            imageType: "png",
+            imageAlt: "Изображение бирюзового чайника",
+          },
+          {
+            title: "3000 баллов «X5 Клуба»",
+            text: "От 3 до 6 месяцев",
+            backgroundColor: "#a6f4ff",
+            includeExtraInfo: true,
+            extraInfo: "300 призов",
+            extraInfoColor: "#2CA7AF",
+            includeInfoIcon: false,
+            memberLogoSrc: "img/content/members-logo/x5-logo.svg",
+            memberLogoWidth: 28,
+            memberLogoHeight: 24,
+            memberLogoAlt: "Логотип X5",
+            imagePath: "slides/lottery-week/slide3",
+            imageName: "stars",
+            imageType: "png",
+            imageAlt: "Изображение улыбающейся зеленой звезды",
+          }
+        ]
+      },
+      {
+        period: "Больше 6 месяцев",
+        titleColor: "#498AE9",
+        backgroundColor: "lottery-card-first",
+        cards: [
+          {
+            title: "Яндекс Станции Мини",
+            text: "Больше 6 месяцев",
+            backgroundColor: "#dfd2f0",
+            includeExtraInfo: false,
+            includeInfoIcon: true,
+            memberLogoSrc: "img/content/members-logo/citilink-logo.svg",
+            memberLogoWidth: 104,
+            memberLogoHeight: 24,
+            memberLogoAlt: "Логотип Ситилинк",
+            imagePath: "slides/lottery-week/slide4",
+            imageName: "music-station",
+            imageType: "png",
+            imageAlt: "Изображение Яндекс Станции Мини в черном цвете",
+          },
+          {
+            title: "3000 баллов «X5 Клуба»",
+            text: "Больше 6 месяцев",
+            backgroundColor: "#b6e3fd",
+            includeExtraInfo: true,
+            extraInfo: "300 призов",
+            extraInfoColor: "#50A8D9",
+            includeInfoIcon: false,
+            memberLogoSrc: "img/content/members-logo/x5-logo.svg",
+            memberLogoWidth: 28,
+            memberLogoHeight: 24,
+            memberLogoAlt: "Логотип X5",
+            imagePath: "slides/lottery-week/slide5",
+            imageName: "coin",
+            imageType: "png",
+            imageAlt: "Изображение улыбающейся золотой монеты",
+          }
+        ]
+      },
+    ]
+
+  section.lottery-week
+    .container.lottery-week__main-wrapper
+      h2 Разыгрываем каждую среду
+      .lottery-week__week-cards-wrapper
+        for item in lotteryCards
+          .lottery-week__period-wrapper(data-class="period-wrapper" data-background-color=item.backgroundColor)
+            .lottery-week__title-wrapper(data-class="period-title-wrapper" data-color=item.titleColor)
+              h3= item.period
+            .lottery-week__swiper
+              .lottery-week__swiper-wrapper
+                for card in item.cards
+                  +lottery-card(card).lottery-week__card

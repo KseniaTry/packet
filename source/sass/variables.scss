@@ -7,17 +7,20 @@ $color-default-black:               #252525;
 $color-default-white:               #ffffff;
 $color-transparent:                 rgba(255, 255, 255, 0);
 $color-accent-main:                 #0088fe;
-$color-accent-second:               #212121;
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
+$color-nero:                        #252525;
+
 
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$lotery-card-first:                 linear-gradient(153deg, #e7f6ff 0%, rgba(255, 255, 255, 0) 100%); // 3 mon 6 mon
+$lotery-card-second:                linear-gradient(153deg, #e1edff 0%, #e3f2ff 0.01%, rgba(255, 255, 255, 0) 100%); // 3 -6 mon
 
 // Typography
 // ---------------------------------

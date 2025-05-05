@@ -9,7 +9,7 @@
 
   color: $color-accent-main;
 
-  background-color: rgb(215, 229, 252);
+  background-color: #d7e5fc;
   border-radius: 12px;
   border: none;
   cursor: pointer;
@@ -21,8 +21,8 @@
   }
 
   &:disabled {
-    color: #BAC1C7;
-    background-color: #FCFCFC;
+    color: #bac1c7;
+    background-color: #fcfcfc;
 
     pointer-events: none;
   }

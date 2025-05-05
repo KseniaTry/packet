@@ -1,0 +1,43 @@
+.lottery-week {
+
+  &__main-wrapper>h2 {
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: 700;
+    color: $color-nero;
+  }
+
+  &__week-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__period-wrapper {
+    padding: 32px;
+    border-radius: 40px;
+    background-color: $color-default-white;
+    min-height: 368px;
+  }
+
+  &__title-wrapper>h3 {
+    margin: 0;
+    margin-bottom: 24px;
+    width: 158px;
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 700;
+  }
+
+  &__swiper {}
+
+  &__swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__card {}
+}
