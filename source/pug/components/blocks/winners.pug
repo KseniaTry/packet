@@ -1,0 +1,20 @@
+mixin winners()
+
+  section.winners
+    .container.winners__main-wrapper
+      .winners__content-wrapper
+        .winners__text-wrapper
+          h2
+            |Узнайте,
+            br
+            |&nbsp;кто уже победил
+          a.btn.winners__button(href="#", aria-label="Итоги розыгрыша")= "Итоги розыгрыша"
+        .winners__image-wrapper
+          .winners__desktop-image-wrapper
+            +img("content/winners/content", "cup-desktop", "png", 357, 280, "Изображение золотого кубка и молнии")
+          .winners__mobile-image-wrapper
+            +img("content/winners/content", "cup-mobile", "png", 89, 97, "Изображение золотого кубка")
+        .winners__background-wrapper
+          +img("content/winners/background", "background-desktop", "png", 633, 315, "")
+
+

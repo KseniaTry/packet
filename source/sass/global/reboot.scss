@@ -14,8 +14,10 @@ body {
 html {
   font-style: normal;
   font-weight: 500;
-  font-size: size-desktop($fz-default);
+  // font-size: size-desktop($fz-default);
+  font-size: $fz-default;
   line-height: 32px;
+  letter-spacing: -0.02em;
   font-family: $ff-manrope;
   color: $color-default-black;
 

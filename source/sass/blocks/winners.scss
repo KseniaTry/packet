@@ -1,0 +1,132 @@
+.winners {
+  position: relative;
+  padding: 20px 0;
+
+  &__main-wrapper {
+    @include vp-767 {
+      padding: 70px 0 0;
+    }
+  }
+
+  &__content-wrapper {
+    position: relative;
+    padding: 20px 94px 18px 36px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+
+    border-radius: 40px;
+    background-color: $color-default-white;
+
+    @include vp-767 {
+      padding: 47px 24px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__text-wrapper {
+    @include vp-767 {
+      z-index: 1;
+    }
+
+    h2 {
+      font-size: 48px;
+      line-height: 100%;
+      letter-spacing: -0.02em;
+      color: $color-nero;
+
+      @include vp-767 {
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        color: $color-default-white;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // основное изображение
+  &__image-wrapper {
+    justify-self: flex-end;
+    z-index: 2;
+
+    @include vp-767 {
+      position: absolute;
+      top: -17px;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+  }
+
+  &__desktop-image-wrapper {
+    width: 357px;
+    height: 280px;
+
+    @include vp-767 {
+      display: none;
+    }
+
+    img {
+      width: 357px;
+      height: 280px;
+      object-fit: cover;
+    }
+  }
+
+  &__mobile-image-wrapper {
+    display: none;
+    width: 89px;
+    height: 97px;
+
+    @include vp-767 {
+      display: block;
+    }
+
+    img {
+      width: 89px;
+      height: 97px;
+      object-fit: cover;
+    }
+  }
+
+  // фон
+  &__background-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 633px;
+    height: 100%;
+
+    @include vp-767 {
+      width: 100%;
+    }
+
+    img {
+      border-radius: 40px;
+      width: 633px;
+      height: 100%;
+      object-fit: cover;
+
+      @include vp-767 {
+        height: 375px;
+        border-radius: 0;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+      }
+    }
+  }
+
+  // кнопка
+  &__button {
+    @include vp-767 {
+      background-color: $color-default-white;
+    }
+  }
+}
