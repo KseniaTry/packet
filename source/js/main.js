@@ -4,7 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import { addLotteryColors } from './modules/lottery-colors.js';
-import { initLotteryWeekSlider } from './modules/lottery-week-slider.js';
+import { initLotterySlider } from './modules/lottery-slider.js';
 
 // ---------------------------------
 
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
     addLotteryColors();
-    initLotteryWeekSlider();
+    initLotterySlider();
   });
 });
 

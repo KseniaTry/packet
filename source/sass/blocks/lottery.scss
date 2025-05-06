@@ -1,4 +1,5 @@
-.lottery-week {
+.lottery {
+  margin-bottom: 50px;
 
   &__main-wrapper {
     @include vp-767 {
@@ -21,11 +22,12 @@
     }
   }
 
-  &__week-cards-wrapper {
+  &__period-cards-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
+    gap: 38px;
   }
 
   &__period-wrapper {
@@ -71,7 +73,6 @@
     gap: 30px;
 
     @include vp-767 {
-      // width: 100vw;
       justify-content: flex-start;
       flex-wrap: nowrap;
       gap: 0;

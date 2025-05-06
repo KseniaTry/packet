@@ -1,7 +1,7 @@
 mixin lottery-week()
 
   -
-    const lotteryCards = [
+    const lotteryWeekCards = [
       {
         period: "Меньше 3 месяцев",
         titleColor: "#48ABD3",
@@ -107,14 +107,4 @@ mixin lottery-week()
     ]
 
   section.lottery-week
-    .container.lottery-week__main-wrapper
-      h2 Разыгрываем каждую среду
-      .lottery-week__week-cards-wrapper
-        for item in lotteryCards
-          .lottery-week__period-wrapper(data-class="period-wrapper" data-background-color=item.backgroundColor)
-            .lottery-week__title-wrapper(data-class="period-title-wrapper" data-color=item.titleColor)
-              h3= item.period
-            .lottery-week__swiper(data-class="lottery-week-swiper")
-              .lottery-week__swiper-wrapper(data-class="lottery-week-swiper-wrapper")
-                for card in item.cards
-                  +lottery-card(card)
+    +lottery-block(lotteryWeekCards, "Разыгрываем каждую среду")

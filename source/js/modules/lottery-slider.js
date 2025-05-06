@@ -2,12 +2,12 @@ import { addSwiperClass, removeSwiperClass } from "../utils/swiper-class-switche
 import { addLotteryPeriodCardColors, resetLotteryPeriodCardColors } from "./lottery-colors";
 
 // инициализация свайпера происходит только при переключении на мобильную версию
-const lotteryWeekSliders = document.querySelectorAll('[data-class="lottery-week-swiper"]');
+const lotterySliders = document.querySelectorAll('[data-class="lottery-swiper"]');
 const breakpoint = window.matchMedia(`(max-width: ${767}px)`);
-let lotteryWeekSwiper;
+let lotterySwiper;
 
-const initLotteryWeekSwiper = (slider) => {
-    lotteryWeekSwiper = new Swiper(slider, {
+const initLotterySwiper = (slider) => {
+    lotterySwiper = new Swiper(slider, {
       slideClass: 'lottery-card',
       slidesPerView: 2,
       spaceBetween: 16,
@@ -20,42 +20,42 @@ const initLotteryWeekSwiper = (slider) => {
 const breakpointChecker = () => {
   if (breakpoint.matches) {
     addLotteryPeriodCardColors();
-    lotteryWeekSliders.forEach((slider) => {
-      const swiperWrapper = slider.querySelector('[data-class="lottery-week-swiper-wrapper"]');
+    lotterySliders.forEach((slider) => {
+      const swiperWrapper = slider.querySelector('[data-class="lottery-swiper-wrapper"]');
       const swiperSlides = slider.querySelectorAll('[data-class="lottery-card"]');
       if (swiperSlides.length > 1) {
         addSwiperClass(slider, swiperWrapper, swiperSlides);
-        initLotteryWeekSwiper(slider);
+        initLotterySwiper(slider);
       }
     })
   } else {
     resetLotteryPeriodCardColors();
-    lotteryWeekSliders.forEach((slider) => {
-      const swiperWrapper = slider.querySelector('[data-class="lottery-week-swiper-wrapper"]');
+    lotterySliders.forEach((slider) => {
+      const swiperWrapper = slider.querySelector('[data-class="lottery-swiper-wrapper"]');
       const swiperSlides = slider.querySelectorAll('[data-class="lottery-card"]');
       removeSwiperClass(slider, swiperWrapper, swiperSlides);
     })
-    if (lotteryWeekSwiper !== undefined) {
-      lotteryWeekSwiper.destroy();
+    if (lotterySwiper !== undefined) {
+      lotterySwiper.destroy();
     }
   }
 };
 
-const initLotteryWeekSlider = () => {
+const initLotterySlider = () => {
   breakpoint.addListener(breakpointChecker);
   breakpointChecker();
 
   if (window.innerWidth < 767) {
     addLotteryPeriodCardColors();
-    lotteryWeekSliders.forEach((slider) => {
-      const swiperWrapper = slider.querySelector('[data-class="lottery-week-swiper-wrapper"]');
+    lotterySliders.forEach((slider) => {
+      const swiperWrapper = slider.querySelector('[data-class="lottery-swiper-wrapper"]');
       const swiperSlides = slider.querySelectorAll('[data-class="lottery-card"]');
       if (swiperSlides.length > 1) {
         addSwiperClass(slider, swiperWrapper, swiperSlides);
-        initLotteryWeekSwiper(slider);
+        initLotterySwiper(slider);
       }
     })
   }
 };
 
-export { initLotteryWeekSlider };
+export { initLotterySlider };

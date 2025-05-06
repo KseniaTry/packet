@@ -109,20 +109,6 @@
     }
   }
 
-  // чекбокс
-  &__checkbox-wrapper {
-    margin-bottom: 16px;
-  }
-
-  &__checkbox-link {
-    color: $color-accent-main;
-    text-decoration: underline;
-
-    p {
-      display: inline;
-    }
-  }
-
   // кнопка
   &__button {
     width: 327px;

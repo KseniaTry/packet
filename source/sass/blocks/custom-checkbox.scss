@@ -1,8 +1,9 @@
-.custom-checkbox-wrapper {
+.custom-checkbox {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
 .custom-checkbox__label {
@@ -11,7 +12,7 @@
 
   font-size: 18px;
   line-height: 135%;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   color: $color-accent-main;
 
   &::before {
@@ -44,6 +45,15 @@
   height: 20px;
 
   opacity: 0%;
+}
+
+.custom-checkbox__link {
+  color: $color-accent-main;
+  text-decoration: underline;
+
+  p {
+    display: inline;
+  }
 }
 
 .custom-checkbox__input:checked+.custom-checkbox__label::after {

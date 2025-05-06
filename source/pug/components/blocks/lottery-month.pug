@@ -1,0 +1,89 @@
+mixin lottery-month()
+
+  -
+    const lotteryMonthCards = [
+      {
+        period: "От 3 до 6 месяцев",
+        titleColor: "#4891D3",
+        backgroundColor: "#e1edff 0%, #e3f2ff 0.01%",
+        cards: [
+          {
+            title: "Телевизоры 65”",
+            text: "От 3 до 6 месяцев",
+            backgroundColor: "#FCCCE8",
+            includeExtraInfo: false,
+            includeInfoIcon: true,
+            memberLogoSrc: "img/content/members-logo/citilink-logo.svg",
+            memberLogoWidth: 104,
+            memberLogoHeight: 24,
+            memberLogoAlt: "Логотип Ситилинк",
+            imagePath: "slides/lottery-month/slide1",
+            imageName: "tv",
+            imageType: "png",
+            imageAlt: "Изображение телевизора",
+          },
+          {
+            title: "3000 баллов «X5 Клуба»",
+            text: "От 3 до 6 месяцев",
+            backgroundColor: "#a6f4ff",
+            includeExtraInfo: true,
+            extraInfo: "300 призов",
+            extraInfoColor: "#2CA7AF",
+            includeInfoIcon: false,
+            memberLogoSrc: "img/content/members-logo/x5-logo.svg",
+            memberLogoWidth: 28,
+            memberLogoHeight: 24,
+            memberLogoAlt: "Логотип X5",
+            imagePath: "slides/lottery-month/slide2",
+            imageName: "stars",
+            imageType: "png",
+            imageAlt: "Изображение улыбающейся зеленой звезды",
+          }
+        ]
+      },
+      {
+        period: "Больше 6 месяцев",
+        titleColor: "#498AE9",
+        backgroundColor: "#e1edff 0%",
+        cards: [
+          {
+            title: "Яндекс Станции Мини",
+            text: "Больше 6 месяцев",
+            backgroundColor: "#C5BCFF",
+            includeExtraInfo: false,
+            includeInfoIcon: true,
+            memberLogoSrc: "img/content/members-logo/citilink-logo.svg",
+            memberLogoWidth: 104,
+            memberLogoHeight: 24,
+            memberLogoAlt: "Логотип Ситилинк",
+            imagePath: "slides/lottery-month/slide3",
+            imageName: "vacum-cleaner",
+            imageType: "png",
+            imageAlt: "Изображение беспроводного пылесоса",
+          },
+          {
+            title: "3000 баллов «X5 Клуба»",
+            text: "Больше 6 месяцев",
+            backgroundColor: "#b6e3fd",
+            includeExtraInfo: true,
+            extraInfo: "300 призов",
+            extraInfoColor: "#50A8D9",
+            includeInfoIcon: false,
+            memberLogoSrc: "img/content/members-logo/x5-logo.svg",
+            memberLogoWidth: 28,
+            memberLogoHeight: 24,
+            memberLogoAlt: "Логотип X5",
+            imagePath: "slides/lottery-month/slide4",
+            imageName: "coin",
+            imageType: "png",
+            imageAlt: "Изображение улыбающейся золотой монеты",
+          }
+        ]
+      },
+    ]
+
+  section.lottery-month
+    +lottery-block(lotteryMonthCards, "Разыгрываем в сентябре")
+    .container.lottery-month__take-part-wrapper
+      +take-part("lottery-month")
+

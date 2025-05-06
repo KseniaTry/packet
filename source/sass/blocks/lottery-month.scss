@@ -1,0 +1,14 @@
+.lottery-month {
+  &__take-part-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  [data-class="take-part-lottery-month"] > .custom-checkbox {
+    justify-content: center;
+
+    @include vp-767 {
+      justify-content: flex-start;
+    }
+  }
+}
