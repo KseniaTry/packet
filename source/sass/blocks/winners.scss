@@ -20,7 +20,7 @@
     background-color: $color-default-white;
 
     @include vp-767 {
-      padding: 47px 24px;
+      padding: 27px 24px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
@@ -30,6 +30,7 @@
   &__text-wrapper {
     @include vp-767 {
       z-index: 1;
+      margin: 0 auto;
     }
 
     h2 {
@@ -107,19 +108,34 @@
     @include vp-767 {
       width: 100%;
     }
+  }
+
+  &__background-desktop {
+    @include vp-767 {
+      display: none;
+    }
 
     img {
       border-radius: 40px;
       width: 633px;
       height: 100%;
       object-fit: cover;
+    }
+  }
 
-      @include vp-767 {
-        height: 375px;
-        border-radius: 0;
-        border-top-right-radius: 20px;
-        border-top-left-radius: 20px;
-      }
+  &__background-mobile {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      height: 257px;
+      border-radius: 0;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
     }
   }
 

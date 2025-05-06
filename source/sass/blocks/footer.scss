@@ -1,3 +1,87 @@
 .footer {
   padding: 40px 0;
+  z-index: 10;
+
+  @include vp-767 {
+    padding: 20px 0;
+  }
+
+  &__main-wrapper {
+
+  }
+
+  &__content-wrapper {
+    padding: 32px 32px 40px 32px;
+    background-color: $color-default-white;
+    border-radius: 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 32px;
+
+    @include vp-767 {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  &__logo-wrapper {
+    width: 100%;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__rights-wrapper {
+    color: $color-fiord;
+    width: 507px;
+
+    @include vp-767 {
+      display: none;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0;
+    }
+  }
+
+  &__policy-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    @include vp-767 {
+      flex-direction: row;
+      justify-content: flex-start;
+      column-gap: 12px;
+      row-gap: 8px;
+    }
+  }
+
+  &__policy-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: underline;
+    color: $color-fiord;
+    letter-spacing: -0.02em;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 110%;
+      text-decoration: none;
+    }
+  }
+
+  &__policy-rules {
+    @include vp-767 {
+      order: -1;
+    }
+  }
 }
