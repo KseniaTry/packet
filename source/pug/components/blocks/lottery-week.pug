@@ -5,7 +5,7 @@ mixin lottery-week()
       {
         period: "Меньше 3 месяцев",
         titleColor: "#48ABD3",
-        backgroundColor: "$lottery-card-first",
+        backgroundColor: "#e7f6ff 0%",
         cards: [
           {
             title: "3000 баллов «X5 Клуба»",
@@ -29,7 +29,7 @@ mixin lottery-week()
       {
         period: "От 3 до 6 месяцев",
         titleColor: "#4891D3",
-        backgroundColor: "$lottery-card-second",
+        backgroundColor: "#e1edff 0%, #e3f2ff 0.01%",
         cards: [
           {
             title: "Чайники",
@@ -68,7 +68,7 @@ mixin lottery-week()
       {
         period: "Больше 6 месяцев",
         titleColor: "#498AE9",
-        backgroundColor: "lottery-card-first",
+        backgroundColor: "#e1edff 0%",
         cards: [
           {
             title: "Яндекс Станции Мини",
@@ -114,7 +114,7 @@ mixin lottery-week()
           .lottery-week__period-wrapper(data-class="period-wrapper" data-background-color=item.backgroundColor)
             .lottery-week__title-wrapper(data-class="period-title-wrapper" data-color=item.titleColor)
               h3= item.period
-            .lottery-week__swiper
-              .lottery-week__swiper-wrapper
+            .lottery-week__swiper(data-class="lottery-week-swiper")
+              .lottery-week__swiper-wrapper(data-class="lottery-week-swiper-wrapper")
                 for card in item.cards
-                  +lottery-card(card).lottery-week__card
+                  +lottery-card(card)

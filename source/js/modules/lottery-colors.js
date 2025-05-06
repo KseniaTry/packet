@@ -1,4 +1,4 @@
-// const periodCards = document.querySelectorAll('[data-class="period-wrapper"]');
+const periodCards = document.querySelectorAll('[data-class="period-wrapper"]');
 const periodTitles = document.querySelectorAll('[data-class="period-title-wrapper"]');
 const lotteryCards = document.querySelectorAll('[data-class="lottery-card"]');
 const extraInfos = document.querySelectorAll('[data-class="extra-info"]')
@@ -6,7 +6,6 @@ const extraInfos = document.querySelectorAll('[data-class="extra-info"]')
 const addPeriodTitleColors = () => {
   periodTitles.forEach((title) => {
     const titleColor = title.dataset.color;
-    console.log(title);
     title.style.color = titleColor;
   });
 };
@@ -25,10 +24,23 @@ const addLotteryCardExtraInfoColors = () => {
   })
 }
 
+const addLotteryPeriodCardColors = () => {
+  periodCards.forEach((card) => {
+    const cardColor = card.dataset.backgroundColor;
+    card.style.backgroundImage = `linear-gradient(153deg, ${cardColor}, rgba(255, 255, 255, 0) 100%)`;
+  })
+}
+
+const resetLotteryPeriodCardColors = () => {
+  periodCards.forEach((card) => {;
+    card.style.backgroundImage = "";
+  })
+}
+
 const addLotteryColors = () => {
   addPeriodTitleColors();
   addLotteryCardColors();
   addLotteryCardExtraInfoColors();
 }
 
-export { addLotteryColors }
+export { addLotteryColors, addLotteryPeriodCardColors, resetLotteryPeriodCardColors }
