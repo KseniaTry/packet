@@ -22,6 +22,10 @@
     width: 1440px;
     height: 655px;
 
+    @include vp-1439 {
+      width: 1024px;
+    }
+
     @include vp-1023 {
       display: none;
     }
@@ -30,6 +34,11 @@
       width: 1440px;
       height: 655px;
       object-fit: cover;
+
+      @include vp-1439 {
+        width: 1024px;
+        object-fit: cover;
+      }
     }
   }
 
@@ -65,6 +74,10 @@
     margin-bottom: 40px;
     width: 480px;
 
+    @include vp-1439 {
+      width: 44%;
+    }
+
     @include vp-1023 {
       padding: 0 6.6%;
       width: 100%;
@@ -91,6 +104,10 @@
 
   &__text-wrapper {
     width: 480px;
+
+    @include vp-1439 {
+      width: 55%;
+    }
 
     @include vp-1023 {
       padding: 0 6.6%;
@@ -127,6 +144,11 @@
     width: 654px;
     height: 649px;
 
+    @include vp-1439 {
+      width: 550px;
+      right: 3%;
+    }
+
     @include vp-1023 {
       position: static;
       order: 2;
@@ -138,6 +160,10 @@
       width: 654px;
       height: 649px;
       object-fit: contain;
+
+      @include vp-1439 {
+        width: 550px;
+      }
 
       @include vp-1023 {
         width: 100%;
