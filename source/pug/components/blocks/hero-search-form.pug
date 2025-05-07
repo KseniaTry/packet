@@ -1,0 +1,10 @@
+mixin hero-search-form()
+
+  .hero__search-form-wrapper
+    form.hero__search-form
+      .hero__search-wrapper
+        label(for="phone-search").hero__search-label Поиск по номеру телефона
+        .hero__search-input-wrapper
+          input(type="text", id="phone-search", name="phone-search", minlength=0, maxlength=4).hero__search-input
+          +icon("icon-search", 30, 30).hero__search-icon
+      p Введите последние 4 цифры номера телефона
