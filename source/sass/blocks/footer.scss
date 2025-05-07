@@ -2,13 +2,16 @@
   padding: 40px 0;
   z-index: 10;
 
-  @include vp-767 {
+  @include vp-1023 {
+    background-color: $color-default-white;
     padding: 20px 0;
   }
 
-  &__main-wrapper {
-
+  @include vp-767 {
+    background-color: transparent;
   }
+
+  &__main-wrapper {}
 
   &__content-wrapper {
     padding: 32px 32px 40px 32px;
@@ -20,7 +23,8 @@
     align-items: flex-end;
     gap: 32px;
 
-    @include vp-767 {
+    @include vp-1023 {
+      justify-content: space-between;
       padding: 0;
       background-color: transparent;
     }
@@ -28,6 +32,10 @@
 
   &__logo-wrapper {
     width: 100%;
+
+    @include vp-1023 {
+      width: auto;
+    }
 
     @include vp-767 {
       display: none;
@@ -37,6 +45,10 @@
   &__rights-wrapper {
     color: $color-fiord;
     width: 507px;
+
+    @include vp-1023 {
+      width: auto;
+    }
 
     @include vp-767 {
       display: none;
@@ -56,7 +68,7 @@
     flex-wrap: wrap;
     gap: 14px;
 
-    @include vp-767 {
+    @include vp-1023 {
       flex-direction: row;
       justify-content: flex-start;
       column-gap: 12px;

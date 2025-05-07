@@ -1,6 +1,10 @@
 .participate {
   padding: 69px 11.5% 101px;
 
+  @include vp-1023 {
+    padding: 40px 10%;
+  }
+
   @include vp-767 {
     padding: 0 24px;
   }
@@ -14,7 +18,7 @@
 
     background-color: $color-default-white;
 
-    @include vp-767 {
+    @include vp-1023 {
       display: block;
       padding: 0;
       background-color: transparent;
@@ -27,6 +31,10 @@
     left: -50px;
     width: 635px;
     height: 600px;
+
+    @include vp-1023 {
+      position: static;
+    }
 
     @include vp-767 {
       display: none;
@@ -44,7 +52,7 @@
     width: 500px;
     margin-left: 11px;
 
-    @include vp-767 {
+    @include vp-1023 {
       margin-left: 0;
       width: 100%;
     }
