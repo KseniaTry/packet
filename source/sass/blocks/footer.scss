@@ -89,6 +89,14 @@
       line-height: 110%;
       text-decoration: none;
     }
+
+    &:hover {
+      color: $color-nobel;
+    }
+
+    &:active {
+      color: $color-nero;
+    }
   }
 
   &__policy-rules {

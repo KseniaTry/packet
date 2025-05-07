@@ -55,6 +55,14 @@
   p {
     display: inline;
   }
+
+  &:hover {
+    color: $color-summer-sky-2;
+  }
+
+  &:active {
+    color: $color-navy-blue;
+  }
 }
 
 .custom-checkbox__input:checked+.custom-checkbox__label::after {
