@@ -56,7 +56,8 @@
     display: inline;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $color-summer-sky-2;
   }
 
