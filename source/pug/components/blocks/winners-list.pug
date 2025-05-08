@@ -227,8 +227,8 @@ mixin winners-list()
       .winners-list__list-wrapper
         for winners in winnersList
           if winners.isActive
-            p= `${winners.weekNumber} неделя`
-            p= winners.dates
+            p.winners-list__week= `${winners.weekNumber} неделя`
+            p.winners-list__dates= winners.dates
             table.winners-list__table
               thead.winners-list__thead
                 tr.winners-list__title-wrapper

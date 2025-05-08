@@ -5,6 +5,10 @@
     justify-content: flex-start;
     gap: 50px;
 
+    @include vp-767 {
+      gap: 30px;
+    }
+
     h2 {
       margin: 0;
       font-size: 48px;
@@ -12,6 +16,11 @@
       font-weight: 700;
       letter-spacing: -0.02em;
       color: $color-nero;
+
+      @include vp-767 {
+        font-size: 32px;
+        line-height: 120%;
+      }
     }
   }
 
@@ -23,6 +32,10 @@
     justify-content: flex-start;
     gap: 30px;
     margin: 0 auto;
+
+    @include vp-767 {
+      gap: 15px;
+    }
   }
 
   &__button {
@@ -31,11 +44,23 @@
     font-size: 32px;
     line-height: 120%;
     background-color: $color-default-white;
+
+    @include vp-767 {
+      width: 100%;
+      padding: 15px;
+      background-color: #E3F2FF;
+      font-size: 18px;
+      line-height: 110%;
+    }
   }
 
   // форма
   &__form {
     margin: 0 auto;
+
+    @include vp-767 {
+      width: 100%;
+    }
   }
 
   // список победителей
@@ -43,16 +68,41 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 32px;
     background-color: $color-default-white;
     border-radius: 40px;
 
-    p {
-      font-size: 32px;
+    @include vp-767 {
+      padding: 0;
+      gap: 30px;
+    }
+  }
+
+  &__week {
+    margin: 0;
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 700;
+    color: $color-nobel;
+
+    @include vp-767 {
+      font-size: 24px;
       line-height: 120%;
-      font-weight: 700;
-      color: $color-nobel;
+    }
+  }
+
+  &__dates {
+    margin: 0;
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 700;
+    color: $color-nobel;
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 110%;
     }
   }
 
@@ -69,15 +119,19 @@
     border-bottom: 1px solid $color-nobel;
   }
 
-  &__title-wrapper {
-  }
+  &__title-wrapper {}
 
   &__title {
-    padding: 15px 30px 15px 0;
+    padding: 0 30px 15px 0;
     font-size: 24px;
     line-height: 120%;
     font-weight: 700;
     text-align: left;
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 110%;
+    }
   }
 
   &__title--name {
@@ -96,10 +150,15 @@
     line-height: 32px;
     letter-spacing: -0.01em;
     font-weight: 500;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 135%;
+      letter-spacing: -0.02em;
+    }
   }
 
-  &__data-wrapper:first-child {
-  }
+  &__data-wrapper:first-child {}
 
   &__data {
     padding-bottom: 15px;
