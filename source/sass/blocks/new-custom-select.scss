@@ -1,0 +1,52 @@
+.new-custom-select {
+  position: relative;
+  display: inline-block;
+
+  &__input {
+    width: 417px;
+    padding: 30px 50px 30px 20px;
+    background-color: $color-cornflower-blue;
+    border-color: transparent;
+    border-radius: 20px;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: $color-default-white;
+  }
+
+  &__label {}
+
+  &__icon-wrapper {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 10px;
+    height: 10px;
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &__select {
+    opacity: 0;
+    position: absolute;
+    top: 107px;
+    left: -9px;
+    width: 433px;
+    padding: 40px 30px;
+    background-color: #E3F2FF;
+    border-radius: 20px;
+  }
+
+  &__option {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: $color-dodger-blue;
+  }
+}
