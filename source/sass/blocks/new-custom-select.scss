@@ -17,6 +17,7 @@
     letter-spacing: -0.02em;
     font-weight: 700;
     color: $color-default-white;
+    cursor: auto;
 
     @include vp-767 {
       width: 100%;
@@ -28,6 +29,11 @@
   }
 
   &__label {}
+
+  &.is-opened .new-custom-select__icon-wrapper {
+    transform: rotate(180deg);
+    top: 58px;
+  }
 
   &__icon-wrapper {
     position: absolute;
@@ -63,6 +69,10 @@
       width: 100%;
       padding: 30px 30px 10px 30px;
     }
+  }
+
+  &__select.is-opened {
+    display: block;
   }
 
   &__option {

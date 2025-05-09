@@ -1,5 +1,5 @@
 import { addSwiperClass, removeSwiperClass } from "../../utils/swiper-class-switcher";
-import { addLotteryPeriodCardColors, resetLotteryPeriodCardColors } from "./lottery-colors";
+import { addLotteryPeriodCardColors, resetLotteryPeriodCardColors} from '../../modules/lottery/lottery-colors';
 
 // инициализация свайпера происходит только при переключении на мобильную версию
 const lotterySliders = document.querySelectorAll('[data-class="lottery-swiper"]');

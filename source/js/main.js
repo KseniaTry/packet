@@ -3,8 +3,9 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
-import { addLotteryColors } from './modules/lottery-colors.js';
-import { initLotterySlider } from './modules/lottery-slider.js';
+import { addLotteryColors } from './modules/lottery/lottery-colors.js';
+import { initLotterySlider } from './modules/lottery/lottery-slider.js';
+import { initForm } from './modules/winners-form.js';
 
 // ---------------------------------
 
@@ -31,6 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     addLotteryColors();
     initLotterySlider();
+    initForm();
   });
 });
 

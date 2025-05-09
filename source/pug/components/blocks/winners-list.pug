@@ -4,7 +4,7 @@ mixin winners-list()
     const winnersList = [
       {
         period: "02.08.23 — первый розыгрыш",
-        isActive: false,
+        isActive: true,
         weekNumber: 1,
         dates: "02.08.23 — 09.08.23",
         id: 1,
@@ -178,7 +178,7 @@ mixin winners-list()
       },
       {
         period: "14.09.23 — седьмой розыгрыш",
-        isActive: true,
+        isActive: false,
         weekNumber: 7,
         dates: "14.09.23 — 20.09.23",
         id: 7,
@@ -214,31 +214,24 @@ mixin winners-list()
         +btn({tag: "button", text: "Еженедельные", type: "button"}).winners-list__button
         +btn({tag: "button", text: "Розыгрыш в сентябре", type: "button"}).winners-list__button
       form.winners-list__form
-        .new-custom-select(data-class="custom-select")
+        .new-custom-select(data-class="custom-select-wrapper")
           for winners in winnersList
             if winners.isActive
-              input(type="text" id="periods" name="periods" autocomplete="off" data-class="custom-input" value=winners.period required).new-custom-select__input
+              input(type="text" id="periods" name="periods" autocomplete="off" data-class="custom-input" value=winners.period required readonly).new-custom-select__input
           label(for="periods" data-class="custom-label").new-custom-select__label
           .new-custom-select__icon-wrapper
             +icon("arrow", 10, 10)
-          .new-custom-select__select
+          .new-custom-select__select(data-class="custom-select")
             for winners in winnersList
-              .new-custom-select__option(data-active=`${winners.isActive ? "is-active" : "not-active"}`)= winners.period
-      .winners-list__list-wrapper
-        for winners in winnersList
-          if winners.isActive
-            p.winners-list__week= `${winners.weekNumber} неделя`
-            p.winners-list__dates= winners.dates
-            table.winners-list__table
-              thead.winners-list__thead
-                tr.winners-list__title-wrapper
-                  th.winners-list__title.winners-list__title--name Имя
-                  th.winners-list__title.winners-list__title--phone Телефон
-                  th.winners-list__title.winners-list__title--prize Приз
-              tbody.winners-list__tbody
-                for nubmer in winners.phoneNumbers
-                  tr.winners-list__data-wrapper
-                    td.winners-list__data= nubmer.name
-                    td.winners-list__data= nubmer.nubmer
-                    td.winners-list__data= nubmer.prize
+              .new-custom-select__option(data-id=winners.id data-class="custom-option" data-active=`${winners.isActive ? "is-active" : "not-active"}`)= winners.period
+      .winners-list__list-wrapper(data-class="winners-list-wrapper")
+        p.winners-list__week(data-class="winners-week")
+        p.winners-list__dates(data-class="winners-dates")
+        table.winners-list__table
+          thead.winners-list__thead
+            tr.winners-list__title-wrapper
+              th.winners-list__title.winners-list__title--name Имя
+              th.winners-list__title.winners-list__title--phone Телефон
+              th.winners-list__title.winners-list__title--prize Приз
+          tbody.winners-list__tbody(data-class="winners-list")
 
