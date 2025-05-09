@@ -1,4 +1,4 @@
-import { addSwiperClass, removeSwiperClass } from "../utils/swiper-class-switcher";
+import { addSwiperClass, removeSwiperClass } from "../../utils/swiper-class-switcher";
 import { addLotteryPeriodCardColors, resetLotteryPeriodCardColors } from "./lottery-colors";
 
 // инициализация свайпера происходит только при переключении на мобильную версию
