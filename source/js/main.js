@@ -7,6 +7,7 @@ import { addLotteryColors } from './modules/lottery/lottery-colors.js';
 import { initLotterySlider } from './modules/lottery/lottery-slider.js';
 import { initForm } from './modules/winners-form.js';
 import { initPhoneSearch } from './modules/phone-sorting.js';
+import { initHeroAnimation } from './modules/hero-animation.js';
 
 // ---------------------------------
 
@@ -35,6 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initLotterySlider();
     initForm();
     initPhoneSearch();
+    initHeroAnimation();
   });
 });
 

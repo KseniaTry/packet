@@ -9,7 +9,7 @@ const searchText = document.querySelector('[data-class="search-text"]');
 const activeOption = getActiveOption(customOptions);
 const REGEX_PHONE = /[^0-9]/;
 
-  // валидация
+// валидация
 const validatePhone = () => {
   phoneSearchInput.addEventListener('input', (evt) => {
     const phoneInputValue = evt.target.value;
@@ -37,6 +37,9 @@ const validatePhone = () => {
 }
 
 const initPhoneSearch = () => {
+  if (phoneSearchInput === null) {
+    return;
+  }
   const activeOptionData = winners.find((winner) => winner.id == activeOption.dataset.id);
   const winnersList = activeOptionData.phoneNumbers;
   const activeWinnersShortNumbers = winnersList.map((winner) => winner.nubmer.slice(-4));

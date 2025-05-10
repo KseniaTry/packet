@@ -8,6 +8,9 @@ const customSelectWrapperClass = '[data-class="custom-select-wrapper"]';
 const customOptions = document.querySelectorAll('[data-class="custom-option"]');
 
 const initForm = () => {
+  if (customSelectWrapper === null) {
+    return;
+  }
   createCustomSelect(customInput, customSelectWrapper, customSelect, customSelectWrapperClass, customOptions, winners)
 }
 
