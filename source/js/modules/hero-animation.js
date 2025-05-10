@@ -21,8 +21,8 @@ const animateMobileHero = () => {
   timeline.addLabel('start');
 
   // картинка появляется из центра и увеличивается до макетного расположения (от 0 до 100%)
-  timeline.to('[data-class="hero-index-image"]', { opacity: 1, scale: 1, ease: 'slow(0.1, 2, true)', duration: 0.8 }, 'start');
-  timeline.to('[data-class="hero-winners-image"]', { opacity: 1, scale: 1, ease: 'slow(0.1, 2, true)', duration: 0.8 }, 'start');
+  timeline.to('[data-class="hero-index-image"]', { scale: 1, ease: 'slow(0.1, 2, true)', duration: 0.8 }, 'start');
+  timeline.to('[data-class="hero-winners-image"]', { scale: 1, ease: 'slow(0.1, 2, true)', duration: 0.8 }, 'start');
 }
 
 const breakpointChecker = () => {
