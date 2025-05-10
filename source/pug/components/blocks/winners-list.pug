@@ -224,6 +224,7 @@ mixin winners-list()
           .new-custom-select__select(data-class="custom-select")
             for winners in winnersList
               .new-custom-select__option(data-id=winners.id data-class="custom-option" data-active=`${winners.isActive ? "is-active" : "not-active"}`)= winners.period
+      p(data-class="no-winners-msg").winners-list__no-winners-msg Победители еще не определены
       .winners-list__list-wrapper(data-class="winners-list-wrapper")
         p.winners-list__week(data-class="winners-week")
         p.winners-list__dates(data-class="winners-dates")

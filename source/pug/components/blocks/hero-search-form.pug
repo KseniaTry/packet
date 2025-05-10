@@ -1,11 +1,12 @@
 mixin hero-search-form()
 
   .hero__search-form-wrapper
-    form.hero__search-form
+    form.hero__search-form(method="get" action="#")
       .hero__search-wrapper
         label(for="phone-search").hero__search-label Поиск по номеру телефона
         .hero__search-input-wrapper
-          input(type="text", id="phone-search", name="phone-search", minlength=0, maxlength=4).hero__search-input
-          span.hero__search-icon-wrapper
-            +icon("icon-search", 30, 30)
-      p Введите последние 4 цифры номера телефона
+          input(type="text", id="phone-search", name="phone-search" maxlength="4").hero__search-input
+          button.hero__search-button(type="submit" data-class="search-button" aria-label="Поиск четырех последних цифр номера телефона победителя")
+            span.hero__search-icon-wrapper
+              +icon("icon-search", 30, 30)
+      p(data-class="search-text") Введите последние 4 цифры номера телефона

@@ -6,6 +6,7 @@ import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import { addLotteryColors } from './modules/lottery/lottery-colors.js';
 import { initLotterySlider } from './modules/lottery/lottery-slider.js';
 import { initForm } from './modules/winners-form.js';
+import { initPhoneSearch } from './modules/phone-sorting.js';
 
 // ---------------------------------
 
@@ -33,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
     addLotteryColors();
     initLotterySlider();
     initForm();
+    initPhoneSearch();
   });
 });
 
