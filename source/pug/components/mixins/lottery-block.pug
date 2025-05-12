@@ -2,7 +2,7 @@ mixin lottery-block(lotteryCards, title)
 
   .lottery
     .container.lottery__main-wrapper
-      h2(data-class="lottery-title")= title
+      h2(data-class="lottery-title")!= title
       .lottery__period-cards-wrapper
         for item in lotteryCards
           .lottery__period-wrapper(data-class="period-wrapper" data-background-color=item.backgroundColor)

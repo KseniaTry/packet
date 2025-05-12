@@ -1,9 +1,14 @@
 .lottery {
   margin-bottom: 50px;
 
+  @include vp-767 {
+    margin-bottom: -8px;
+  }
+
   &__main-wrapper {
     @include vp-767 {
-      padding: 0;
+        padding:0;
+      padding-top: 23px;
     }
   }
 
@@ -15,12 +20,22 @@
     letter-spacing: -0.03em;
     color: $color-nero;
 
+    br {
+      display: none;
+    }
+
     @include vp-767 {
+      margin: 0;
+      margin-bottom: 20px;
       padding: 0 24px;
       font-size: 32px;
       line-height: 120%;
       font-weight: 700;
       letter-spacing: -0.02em;
+
+      br {
+        display: block;
+      }
     }
   }
 
@@ -30,6 +45,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 38px;
+
+    @include vp-767 {
+      gap: 0;
+    }
   }
 
   &__period-wrapper {
@@ -58,11 +77,16 @@
     letter-spacing: -0.02em;
 
     @include vp-767 {
+      margin-bottom: 15px;
       width: auto;
       font-size: 24px;
       line-height: 120%;
       font-weight: 700;
       letter-spacing: -0.02em;
+
+      br {
+        display: none;
+      }
     }
   }
 
