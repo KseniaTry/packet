@@ -1,4 +1,4 @@
-import { getActiveOption } from "./new-custom-select";
+import { getActiveOption } from "../new-custom-select";
 import { winners } from "./winners-mock";
 import { renderSearchResult, renderWinnersList } from "./winners-list";
 

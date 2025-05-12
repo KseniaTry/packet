@@ -1,4 +1,4 @@
-import { renderWinnersList } from "./winners-list";
+import { renderWinnersList } from "./winners/winners-list";
 
 // кастомный селект
 const openCustomSelect = (customInput, customSelectWrapper, customSelect) => {

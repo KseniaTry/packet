@@ -1,4 +1,4 @@
-import { createCustomSelect } from "./new-custom-select";
+import { createCustomSelect } from "../new-custom-select"
 import { winners } from "./winners-mock";
 
 const customSelectWrapper = document.querySelector(('[data-class="custom-select-wrapper"]'));
