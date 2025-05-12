@@ -27,7 +27,7 @@ mixin lottery-card(options = {})
       if includeExtraInfo
         .lottery-card__extra-info-wrapper(data-class="extra-info" data-color= extraInfoColor)
           p= extraInfo
-      h2= title
+      h2!= title
       h3= text
     .lottery-card__image-wrapper(data-class="lottery-card-image")
       +img(imagePath, imageName, imageType, imageAlt)

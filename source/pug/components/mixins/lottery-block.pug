@@ -7,7 +7,7 @@ mixin lottery-block(lotteryCards, title)
         for item in lotteryCards
           .lottery__period-wrapper(data-class="period-wrapper" data-background-color=item.backgroundColor)
             .lottery__title-wrapper(data-class="period-title-wrapper" data-color=item.titleColor)
-              h3(data-class="lottery-period")= item.period
+              h3(data-class="lottery-period")!= item.period
             .lottery__swiper(data-class="lottery-swiper")
               .lottery__swiper-wrapper(data-class="lottery-swiper-wrapper")
                 for card in item.cards

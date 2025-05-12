@@ -68,7 +68,7 @@
   &__text-wrapper {
     grid-column: 2 / 3;
     width: 500px;
-    margin-left: 11px;
+    margin-left: 14px;
 
     @include vp-1439 {
       margin-left: 0;
@@ -81,6 +81,7 @@
       font-weight: 700;
       font-size: 48px;
       line-height: 100%;
+      letter-spacing: -0.02em;
 
       @include vp-1439 {
         font-size: 40px;
@@ -94,6 +95,9 @@
 
     p {
       margin: 0;
+      font-size: 25px;
+      line-height: 32px;
+      letter-spacing: -0.01em;
 
       @include vp-1439 {
         font-size: 18px;
