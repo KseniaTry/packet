@@ -18,7 +18,7 @@ mixin lottery-card(options = {})
   - const imageAlt = options.imageAlt ? options.imageAlt : ""
 
   article.lottery-card(data-class="lottery-card" data-color= backgroundColor)
-    .lottery-card__text-wrapper
+    .lottery-card__text-wrapper(data-class="lottery-card-text")
       .lottery-card__logo-wrapper
         img(src= memberLogoSrc, width=memberLogoWidth, height=memberLogoHeight, alt=memberLogoAlt)
       if includeInfoIcon
@@ -29,5 +29,5 @@ mixin lottery-card(options = {})
           p= extraInfo
       h2= title
       h3= text
-    .lottery-card__image-wrapper
+    .lottery-card__image-wrapper(data-class="lottery-card-image")
       +img(imagePath, imageName, imageType, imageAlt)
