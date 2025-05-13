@@ -2,10 +2,10 @@
   position: relative;
   display: block;
   padding: size(15px) size(50px);
-  width: 327px;
+  width: size(327px);
 
   font-weight: 700;
-  font-size: 18px;
+  font-size: size(18px);
   line-height: 110%;
   text-align: center;
   letter-spacing: -0.02em;
@@ -13,7 +13,7 @@
   color: $color-accent-main;
 
   background-color: $color-hawkes-blue;
-  border-radius: 12px;
+  border-radius: size(12px);
   border: none;
   cursor: pointer;
 
@@ -35,7 +35,7 @@
     height: 100%;
     background-image: linear-gradient(to right, $color-default-white 0%, $color-cornflower-blue-2 0.01%, $color-maya-blue 90%, $color-transparent 50%);
     z-index: -1;
-    border-radius: 12px;
+    border-radius: size(12px);
     transition: width 1s ease-in-out;
   }
 

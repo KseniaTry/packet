@@ -7,12 +7,12 @@
   }
 
   &__input {
-    width: 419px;
-    padding: 28px 49px 29px 32px;
+    width: size(419px);
+    padding: size(28px) size(49px) size(29px) size(32px);
     background-color: $color-cornflower-blue;
     border-color: transparent;
-    border-radius: 20px;
-    font-size: 24px;
+    border-radius: size(20px);
+    font-size: size(24px);
     line-height: 120%;
     letter-spacing: -0.012em;
     font-weight: 700;
@@ -28,19 +28,17 @@
     }
   }
 
-  &__label {}
-
   &.is-opened .new-custom-select__icon-wrapper {
     transform: rotate(180deg);
-    top: 58px;
+    top: size(58px);
   }
 
   &__icon-wrapper {
     position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 10px;
-    height: 10px;
+    top: size(30px);
+    right: size(30px);
+    width: size(10px);
+    height: size(10px);
 
     @include vp-767 {
       top: 9px;
@@ -48,20 +46,20 @@
     }
 
     svg {
-      width: 10px;
-      height: 10px;
+      width: size(10px);
+      height: size(10px);
     }
   }
 
   &__select {
     display: none;
     position: absolute;
-    top: 107px;
-    left: -9px;
-    width: 433px;
-    padding: 30px 10px;
+    top: size(107px);
+    left:size(-9px);
+    width: size(433px);
+    padding: size(30px) size(10px);
     background-color: $color-alice-blue;
-    border-radius: 20px;
+    border-radius: size(20px);
     z-index: 20;
 
     @include vp-767 {
@@ -77,9 +75,8 @@
   }
 
   &__option {
-    padding: 10px 20px;
-    // margin-bottom: 20px;
-    font-size: 24px;
+    padding: size(10px) size(20px);
+    font-size: size(24px);
     line-height: 120%;
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -95,7 +92,7 @@
     &:active {
       background-color: $color-dodger-blue;
       color: $color-default-white;
-      border-radius: 20px;
+      border-radius: size(20px);
     }
   }
 }

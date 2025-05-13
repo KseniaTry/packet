@@ -1,5 +1,5 @@
 .participate {
-  padding: 97px 11.5% 101px;
+  padding: size(97px) 11.5% size(101px);
 
   @include vp-1023 {
     padding: 50px 10%;
@@ -11,12 +11,12 @@
 
   &__main-wrapper {
     position: relative;
-    padding: 81px 40px 91px;
-    border-radius: 40px;
+    padding: size(81px) size(40px) size(91px);
+    border-radius: size(40px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: $color-default-white;
-    min-height: 400px;
+    min-height: size(400px);
 
     @include vp-1439 {
       grid-template-columns: auto 40%;
@@ -32,10 +32,10 @@
 
   &__image-wrapper {
     position: absolute;
-    top: -78px;
-    left: -50px;
-    width: 635px;
-    height: 600px;
+    top: size(-78px);
+    left: size(-50px);
+    width: size(635px);
+    height: size(600px);
 
     @include vp-1439 {
       top: 0;
@@ -54,8 +54,8 @@
     }
 
     img {
-      width: 635px;
-      height: 600px;
+      width: size(635px);
+      height: size(600px);
       object-fit: cover;
 
       @include vp-1439 {
@@ -67,8 +67,8 @@
 
   &__text-wrapper {
     grid-column: 2 / 3;
-    width: 500px;
-    margin-left: 14px;
+    width: size(500px);
+    margin-left: size(14px);
 
     @include vp-1439 {
       margin-left: 0;
@@ -77,9 +77,9 @@
 
     h2 {
       margin: 0;
-      margin-bottom: 20px;
+      margin-bottom: size(20px);
       font-weight: 700;
-      font-size: 48px;
+      font-size: size(48px);
       line-height: 100%;
       letter-spacing: -0.02em;
 
@@ -95,8 +95,8 @@
 
     p {
       margin: 0;
-      font-size: 25px;
-      line-height: 32px;
+      font-size: size(25px);
+      line-height: size(32px);
       letter-spacing: -0.01em;
 
       @include vp-1439 {

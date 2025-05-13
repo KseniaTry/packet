@@ -1,5 +1,5 @@
 .header {
-  padding: 61px 0 27px;
+  padding: size(61px) 0 size(27px);
 
   @include vp-1023 {
     padding: 20px 0;
@@ -18,16 +18,14 @@
     }
   }
 
-  &__logo {}
-
   &__logo-desktop {
     display: block;
-    width: 162px;
-    height: 28px;
+    width: size(162px);
+    height: size(28px);
 
     img {
-      width: 162px;
-      height: 28px;
+      width: size(162px);
+      height: size(28px);
       object-fit: contain;
     }
 

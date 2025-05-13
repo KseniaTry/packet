@@ -1,5 +1,5 @@
 .lottery {
-  margin-bottom: 50px;
+  margin-bottom: size(50px);
 
   @include vp-767 {
     margin-bottom: -8px;
@@ -7,14 +7,14 @@
 
   &__main-wrapper {
     @include vp-767 {
-      padding:0;
+      padding: 0;
       padding-top: 23px;
     }
   }
 
   &__main-wrapper>h2 {
-    margin-bottom: 35px;
-    font-size: 48px;
+    margin-bottom: size(35px);
+    font-size: size(48px);
     line-height: 100%;
     font-weight: 700;
     letter-spacing: -0.03em;
@@ -44,7 +44,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 38px;
+    gap: size(38px);
 
     @include vp-767 {
       gap: 0;
@@ -52,10 +52,10 @@
   }
 
   &__period-wrapper {
-    padding: 32px;
-    border-radius: 40px;
+    padding: size(32px);
+    border-radius: size(40px);
     background-color: $color-default-white;
-    min-height: 368px;
+    min-height: size(368px);
 
     @include vp-767 {
       width: 100vw;
@@ -69,9 +69,9 @@
 
   &__title-wrapper>h3 {
     margin: 0;
-    margin-bottom: 24px;
-    width: 158px;
-    font-size: 32px;
+    margin-bottom: size(24px);
+    width: size(158px);
+    font-size: size(32px);
     line-height: 120%;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -92,8 +92,8 @@
 
   &__swiper {
     @include vp-767 {
-    width: 342px;
-    margin: 0 auto;
+      width: 342px;
+      margin: 0 auto;
     }
   }
 
@@ -101,7 +101,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 30px;
+    gap: size(30px);
 
     @include vp-767 {
       justify-content: flex-start;

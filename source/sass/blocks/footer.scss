@@ -1,5 +1,5 @@
 .footer {
-  padding: 30px 0;
+  padding: size(30px) 0;
   z-index: 10;
 
   @include vp-1023 {
@@ -15,15 +15,15 @@
   &__main-wrapper {}
 
   &__content-wrapper {
-    padding: 32px 32px 40px 32px;
+    padding: size(32px) size(32px) size(40px) size(32px);
     background-color: $color-default-white;
-    border-radius: 40px;
+    border-radius: size(40px);
 
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    gap: 29px;
-    row-gap: 27px;
+    gap: size(29px);
+    row-gap: size(27px);
 
     @include vp-1023 {
       justify-content: space-between;
@@ -34,6 +34,11 @@
 
   &__logo-wrapper {
     width: 100%;
+
+    img {
+      width: size(56px);
+      height: size(40px);
+    }
 
     @include vp-1023 {
       width: auto;
@@ -46,7 +51,7 @@
 
   &__rights-wrapper {
     color: $color-fiord;
-    width: 507px;
+    width: size(507px);
 
     @include vp-1023 {
       width: auto;
@@ -58,8 +63,8 @@
 
     p {
       margin: 0;
-      font-size: 14px;
-      line-height: 18px;
+      font-size: size(14px);
+      line-height: size(18px);
       letter-spacing: 0;
     }
   }
@@ -68,7 +73,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 11px;
+    gap: size(11px);
 
     @include vp-1023 {
       flex-direction: row;
@@ -80,8 +85,8 @@
 
   &__policy-link {
     font-weight: 500;
-    font-size: 17px;
-    line-height: 22px;
+    font-size: size(17px);
+    line-height: size(22px);
     text-decoration: underline;
     color: $color-fiord;
     letter-spacing: -0.01em;
