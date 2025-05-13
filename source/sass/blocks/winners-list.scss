@@ -1,4 +1,6 @@
 .winners-list {
+  padding: 15px 0 22px;
+
   &__main-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -11,6 +13,7 @@
 
     h2 {
       margin: 0;
+      margin-bottom: -17px;
       font-size: 48px;
       line-height: 100%;
       font-weight: 700;
@@ -39,7 +42,7 @@
   }
 
   &__button {
-    width: 48%; // 540px
+    width: 48.5%; // 540px
     padding: 32px;
     font-size: 32px;
     line-height: 120%;
@@ -73,8 +76,8 @@
     padding: 32px;
     background-color: $color-default-white;
     border-radius: 40px;
-    max-height: 787px;
-    overflow-y: scroll;
+    // max-height: 787px;
+    // overflow-y: scroll;
 
     @include vp-767 {
       border-radius: 0;
@@ -132,6 +135,17 @@
     width: 100%;
     border-collapse: collapse;
     border-spacing: 30px 0;
+    display: block;
+    max-height: 654px;
+    overflow-y: auto;
+  }
+
+
+  &__table .winners-list__tbody::before {
+    content: "";
+    display: block;
+    height: 10px;
+    /* высота отступа сверху */
   }
 
   &__thead {
@@ -157,11 +171,11 @@
   }
 
   &__title--name {
-    width: 150px;
+    width: 180px;
   }
 
   &__title--phone {
-    width: 180px;
+    width: 210px;
   }
 
   &__title--prize {}
@@ -183,7 +197,7 @@
   &__data-wrapper:first-child {}
 
   &__data {
-    padding-bottom: 15px;
+    padding-bottom: 14px;
     padding-right: 30px;
   }
 }
