@@ -9,12 +9,12 @@ let lotterySwiper;
 const initLotterySwiper = (slider) => {
     lotterySwiper = new Swiper(slider, {
       slideClass: 'lottery-card',
-      slidesPerView: 2,
+      slidesPerView: 'auto',
       spaceBetween: 16,
       loop: true,
       loopedSlides: 1,
       allowTouchMove: true,
-    });
+    },);
 };
 
 const breakpointChecker = () => {

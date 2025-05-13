@@ -1,7 +1,7 @@
 mixin hero(title, pageName)
   section.hero
     .hero__background-wrapper(data-class=`hero-${pageName}-background` data-animation="hero-background")
-      .hero__background-desktop
+      .hero__background-desktop(data-class=`hero-${pageName}-background-desktop`)
         +img("content/hero/background", "background-desktop", "png", 1440, 655, "")
       .hero__background-mobile
         +img("content/hero/background", "background-mobile", "png", 375, 480, "")

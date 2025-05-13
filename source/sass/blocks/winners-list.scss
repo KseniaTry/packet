@@ -33,13 +33,9 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 15px;
     margin: 0 auto;
-
-    @include vp-767 {
-      gap: 15px;
-    }
   }
 
   &__button {
@@ -137,6 +133,7 @@
     display: block;
     max-height: 654px;
     overflow-y: auto;
+    table-layout: fixed;
 
     @include vp-767 {
       max-height: 669px;
@@ -146,12 +143,8 @@
   &__table .winners-list__tbody::before {
     content: "";
     display: block;
-    height: 10px;
+    height: 15px;
     /* высота отступа сверху */
-
-    @include vp-767 {
-      height: 15px;
-    }
   }
 
   &__thead {
@@ -178,7 +171,7 @@
   }
 
   &__title--name {
-    width: 180px;
+    width: 11.4%; // 180 17
 
     @include vp-767 {
       width: 100px;
@@ -186,7 +179,7 @@
   }
 
   &__title--phone {
-    width: 210px;
+    width: 6%; // 210 19
 
     @include vp-767 {
       width: 120px;
@@ -194,6 +187,8 @@
   }
 
   &__title--prize {
+    width: 43%; // 57
+
     @include vp-767 {
       width: 105px;
     }
@@ -213,7 +208,7 @@
   }
 
   &__data {
-    padding: 0 30px 14px 0;
+    padding: 0 30px 15px 0;
 
     @include vp-767 {
       padding: 0 10px 16px 0;
