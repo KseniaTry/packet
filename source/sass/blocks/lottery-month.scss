@@ -16,6 +16,11 @@
   }
 
   &__form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: size(16px);
+
     @include vp-767 {
       width: 100%;
     }

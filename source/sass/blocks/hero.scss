@@ -152,7 +152,14 @@
     }
   }
 
-  // кнопка
+  // кнопка и чекбокс
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: size(16px);
+  }
+
   &__button {
     width: size(327px);
 
@@ -345,9 +352,9 @@
     right: size(13px);
 
     @include vp-1439 {
-    width: 494px;
-    top: -70px;
-    right: -33px;
+      width: 494px;
+      top: -70px;
+      right: -33px;
     }
 
     @include vp-1023 {
