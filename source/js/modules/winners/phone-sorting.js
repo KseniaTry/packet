@@ -1,6 +1,6 @@
-import { getActiveOption } from "../new-custom-select";
-import { winners } from "./winners-mock";
-import { renderSearchResult, renderWinnersList } from "./winners-list";
+import {getActiveOption} from '../new-custom-select';
+import {winners} from './winners-mock';
+import {renderSearchResult, renderWinnersList} from './winners-list';
 
 const phoneSearchInput = document.getElementById('phone-search');
 const searchButton = document.querySelector('[data-class="search-button"]');
@@ -17,8 +17,8 @@ const validatePhone = () => {
 
     if (phoneInputLength < 4) {
       searchText.textContent = 'Введите последние 4 цифры номера телефона';
-      searchText.style.color = "#0088FE";
-      phoneSearchInput.style.color = "#0088FE";
+      searchText.style.color = '#0088FE';
+      phoneSearchInput.style.color = '#0088FE';
       renderWinnersList(activeOption, winners);
     }
 
@@ -34,7 +34,7 @@ const validatePhone = () => {
       phoneSearchInput.setCustomValidity('');
     }
   });
-}
+};
 
 const initPhoneSearch = () => {
   if (phoneSearchInput === null) {
@@ -46,7 +46,6 @@ const initPhoneSearch = () => {
 
   searchButton.addEventListener('click', (evt) => {
     const searchResult = activeWinnersShortNumbers.find((shortNumber) => shortNumber === phoneSearchInput.value);
-    console.log(searchResult);
     const phoneInputLength = String(phoneSearchInput.value).length;
 
     if (phoneInputLength < 4) {
@@ -55,19 +54,18 @@ const initPhoneSearch = () => {
       if (searchResult != undefined) {
         const resultNumberIndex = activeWinnersShortNumbers.indexOf(searchResult);
         const resultWinnerInfo = [];
-        resultWinnerInfo.push(winnersList[resultNumberIndex]);
-        console.log(resultWinnerInfo);
+        resultWinnerInfo.push(winnersList[resultNumberIndex])
         renderSearchResult(resultWinnerInfo);
       } else {
         searchText.textContent = 'Номер не найден';
-        searchText.style.color = "#FF5200";
-        phoneSearchInput.style.color = "#FF5200";
+        searchText.style.color = '#FF5200';
+        phoneSearchInput.style.color = '#FF5200';
       }
     }
     evt.preventDefault();
-  })
+  });
 
   validatePhone();
 };
 
-export { initPhoneSearch }
+export {initPhoneSearch};

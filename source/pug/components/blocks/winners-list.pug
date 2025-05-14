@@ -43,20 +43,20 @@ mixin winners-list()
     .container.winners-list__main-wrapper
       h2 Список победителей
       .winners-list__buttons-wrapper
-        +btn({tag: "button", text: "Еженедельные", type: "button"}).winners-list__button
-        +btn({tag: "button", text: "Розыгрыш в сентябре", type: "button"}).winners-list__button
+        +btn.winners-list__button({tag: "button", text: "Еженедельные", type: "button"})
+        +btn.winners-list__button({tag: "button", text: "Розыгрыш в сентябре", type: "button"})
       form.winners-list__form
         .new-custom-select(data-class="custom-select-wrapper")
           for winners in winnersList
             if winners.isActive
-              input(type="text" id="periods" name="periods" autocomplete="off" data-class="custom-input" value=winners.period required readonly).new-custom-select__input
-          label(for="periods" data-class="custom-label").new-custom-select__label
+              input.new-custom-select__input(type="text", id="periods", name="periods", autocomplete="off", data-class="custom-input", value=winners.period, required, readonly)
+          label.new-custom-select__label(for="periods", data-class="custom-label")
           .new-custom-select__icon-wrapper
             +icon("arrow", 10, 10)
           .new-custom-select__select(data-class="custom-select")
             for winners in winnersList
-              .new-custom-select__option(data-id=winners.id data-class="custom-option" data-active=`${winners.isActive ? "is-active" : "not-active"}`)= winners.period
-      p(data-class="no-winners-msg").winners-list__no-winners-msg Победители еще не определены
+              .new-custom-select__option(data-id=winners.id, data-class="custom-option", data-active=`${winners.isActive ? "is-active" : "not-active"}`)= winners.period
+      p.winners-list__no-winners-msg(data-class="no-winners-msg") Победители еще не определены
       .winners-list__list-wrapper(data-class="winners-list-wrapper")
         p.winners-list__week(data-class="winners-week")
         p.winners-list__dates(data-class="winners-dates")

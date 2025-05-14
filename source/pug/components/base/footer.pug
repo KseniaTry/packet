@@ -1,13 +1,13 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
-    .container.footer__main-wrapper
+    .container
       .footer__content-wrapper
         .footer__logo-wrapper
-          img(src="img/content/footer-logo/footer-logo.svg" width="56" height="40" alt="Логотип X5")
+          img(src="img/content/footer-logo/footer-logo.svg", width="56", height="40", alt="Логотип X5")
         .footer__rights-wrapper
           p © 2021–2023
           p OOO «Корпоративный центр ИКС 5»
         .footer__policy-wrapper
-          a(href="#").footer__policy-link Политика конфиденциальности
-          a(href="#").footer__policy-link Пользовательское соглашение
-          a(href="#").footer__policy-link.footer__policy-rules Правила акции
+          a.footer__policy-link(href="#") Политика конфиденциальности
+          a.footer__policy-link(href="#") Пользовательское соглашение
+          a.footer__policy-link.footer__policy-rules(href="#") Правила акции

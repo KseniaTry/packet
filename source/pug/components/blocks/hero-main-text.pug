@@ -5,11 +5,11 @@ mixin hero-main-text()
       |Мы считаем каждый день вместе! Проверьте, сколько вы с «Пакетом», выигрывайте баллы «X5 Клуба»
       br
       | и ценные призы от Ситилинк.
-    form.hero__form
+    form.hero__form(method="post")
       .custom-checkbox.hero__checkbox-wrapper
-        input(type="checkbox" id="agreement" name="agreement" data-class="agreement-input" required).custom-checkbox__input.hero__input
-        label(for="argeement").custom-checkbox__label.hero__label
+        input.custom-checkbox__input.hero__input(type="checkbox", id="agreement", name="agreement", data-class="agreement-input", required)
+        label.custom-checkbox__label.hero__label(for="agreement")
           |Я согласен на
-          a(href="#").custom-checkbox__link
+          a.custom-checkbox__link(href="#")
             p участие в акции
       button.btn.hero__button(type="button", aria-label="Принять участие")= "Принять участие"

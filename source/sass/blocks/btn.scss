@@ -18,7 +18,7 @@
   cursor: pointer;
 
   transition: opacity $trans-default;
-  transition: all 300ms ease;
+  // transition: all 300ms ease;
 
   @include vp-767 {
     width: 100%;

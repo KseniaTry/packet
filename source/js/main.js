@@ -3,13 +3,13 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
-import { addLotteryColors } from './modules/lottery/lottery-colors.js';
-import { initLotterySlider } from './modules/lottery/lottery-slider.js';
-import { initForm } from './modules/winners/winners-form.js';
-import { initPhoneSearch } from './modules/winners/phone-sorting.js';
-import { initButtonColorChange } from './modules/btn-mobile.js';
-import { initAnimation } from './modules/animation/animation.js';
-import { initHeroAnimation } from './modules/animation/hero-animation.js';
+import {addLotteryColors} from './modules/lottery/lottery-colors.js';
+import {initLotterySlider} from './modules/lottery/lottery-slider.js';
+import {initForm} from './modules/winners/winners-form.js';
+import {initPhoneSearch} from './modules/winners/phone-sorting.js';
+import {initButtonColorChange} from './modules/btn-mobile.js';
+import {initAnimation} from './modules/animation/animation.js';
+import {initHeroAnimation} from './modules/animation/hero-animation.js';
 
 // ---------------------------------
 

@@ -1,6 +1,6 @@
 mixin hero(title, pageName)
   section.hero
-    .hero__background-wrapper(data-class=`hero-${pageName}-background` data-animation="hero-background")
+    .hero__background-wrapper(data-class=`hero-${pageName}-background`, data-animation="hero-background")
       .hero__background-desktop(data-class=`hero-${pageName}-background-desktop`)
         +img("content/hero/background", "background-desktop", "png", 1440, 655, "")
       .hero__background-mobile
@@ -13,6 +13,6 @@ mixin hero(title, pageName)
         +hero-main-text()
       if pageName === "winners"
         +hero-search-form()
-      .hero__image-wrapper(data-class=`hero-${pageName}-image` data-animation="hero-image")
+      .hero__image-wrapper(data-class=`hero-${pageName}-image`, data-animation="hero-image")
         +img("content/hero", "goods", "png", 654, 649, "Изображение товаров бытовой техники")
 

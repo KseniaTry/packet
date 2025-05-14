@@ -8,9 +8,9 @@ const mobileButtonColorChange = () => {
       const form = evt.target.closest('FORM');
       const button = form.querySelector('.btn');
       button.classList.toggle('input-checked');
-    })
-  })
-}
+    });
+  });
+};
 
 const breakpointChecker = () => {
   if (breakpoint.matches) {
@@ -18,11 +18,11 @@ const breakpointChecker = () => {
   } else {
     return;
   }
-}
+};
 
 const initButtonColorChange = () => {
   breakpoint.addListener(breakpointChecker);
   breakpointChecker();
-}
+};
 
-export { initButtonColorChange };
+export {initButtonColorChange};

@@ -14,7 +14,7 @@ const initLotterySwiper = (slider) => {
       loop: true,
       loopedSlides: 1,
       allowTouchMove: true,
-    },);
+    });
 };
 
 const breakpointChecker = () => {

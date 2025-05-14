@@ -1,4 +1,4 @@
-import { renderWinnersList } from "./winners/winners-list";
+import {renderWinnersList} from './winners/winners-list';
 
 // кастомный селект
 const openCustomSelect = (customInput, customSelectWrapper, customSelect) => {
@@ -29,16 +29,16 @@ const getActiveOption = (options) => {
     if (option.dataset.active === 'is-active') {
       activeOption = option;
     }
-  })
+  });
   return activeOption;
-}
+};
 
 const createCustomSelect = (customInput, customSelectWrapper, customSelect, dataClass, customOptions, winners) => {
   openCustomSelect(customInput, customSelectWrapper, customSelect);
   closeCustomSelectOnPageClick(customSelectWrapper, customSelect, dataClass);
 
   // отрисовка текущего списка (по умолчанию выбрана первая неделя)
-  const activeOption = getActiveOption(customOptions);
+  let activeOption = getActiveOption(customOptions);
   renderWinnersList(activeOption, winners);
 
   // переключение options в кастомном селекте + перерисовка списки исходя из выбранного option
@@ -49,7 +49,7 @@ const createCustomSelect = (customInput, customSelectWrapper, customSelect, data
     customInput.value = evt.target.textContent;
 
     // изменение дата атрибута выбранного (=активного) option
-    const activeOption = getActiveOption(customOptions);
+    activeOption = getActiveOption(customOptions);
     activeOption.dataset.active = 'not-active';
     evt.target.dataset.active = 'is-active';
     const newActiveOption = getActiveOption(customOptions);
@@ -63,4 +63,4 @@ const createCustomSelect = (customInput, customSelectWrapper, customSelect, data
   });
 };
 
-export { createCustomSelect, getActiveOption };
+export {createCustomSelect, getActiveOption};

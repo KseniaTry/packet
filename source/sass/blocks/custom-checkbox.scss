@@ -65,6 +65,6 @@
   }
 }
 
-.custom-checkbox__input:checked+.custom-checkbox__label::after {
+.custom-checkbox__input:checked + .custom-checkbox__label::after {
   opacity: 100%;
 }

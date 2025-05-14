@@ -16,7 +16,7 @@
     width: size(136px);
     margin: 0 auto;
 
-    &>h2 {
+    & > h2 {
       margin: 0;
       font-size: size(16px);
       line-height: 126%;
@@ -24,7 +24,7 @@
       letter-spacing: -0.02em;
     }
 
-    &>h3 {
+    & > h3 {
       margin: 0;
       font-size: size(12px);
       line-height: size(18px);
@@ -37,10 +37,6 @@
     min-width: size(28px);
     max-width: size(104px);
     height: size(24px);
-
-    @include vp-767 {
-
-    }
 
     img {
       min-width: size(28px);

@@ -85,12 +85,12 @@ mixin lottery-month()
   section.lottery-month
     +lottery-block(lotteryMonthCards, "Разыгрываем<br> в сентябре")
     .container.lottery-month__form-wrapper
-      form.lottery-month__form
+      form.lottery-month__form(method="post", action="")
         .custom-checkbox.lottery-month__checkbox-wrapper
-          input(type="checkbox" id="agreement-2" name="agreement-2" data-class="agreement-input" required).custom-checkbox__input.lottery-month__input
-          label(for="argeement").custom-checkbox__label.lottery-month__label
+          input.custom-checkbox__input.lottery-month__input(type="checkbox", id="agreement-2", name="agreement-2", data-class="agreement-input", required)
+          label.custom-checkbox__label.lottery-month__label(for="agreement-2")
             |Я согласен на
-            a(href="#").custom-checkbox__link
+            a.custom-checkbox__link(href="#")
               p участие в акции
         button.btn.lottery-month__button(type="button", aria-label="Принять участие")= "Принять участие"
 
