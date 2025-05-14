@@ -67,8 +67,8 @@ const initAnimation = () => {
   // блок winners
   const winnerText = ScrollTrigger.batch('[data-class=\'winner-text\']', {
     onEnter: (batch) => gsap.fromTo(batch,
-        {opacity: 0, autoAlpha: 1, duration: 0.45, stagger: 0.1},
-        {opacity: 1, autoAlpha: 1, duration: 0.45, stagger: 0.1}),
+        {opacity: 0, scale: 0, autoAlpha: 1, duration: 0.45, stagger: 0.1},
+        {opacity: 1, scale: 1, autoAlpha: 1, duration: 0.45, stagger: 0.1}),
     start: 'top center',
   });
   batchArray.push(winnerText);

@@ -31,9 +31,8 @@
     top: 0;
     left: 0;
     display: block;
-    width: 90%;
+    width: 0;
     height: 100%;
-    background-image: linear-gradient(to right, $color-default-white 0%, $color-cornflower-blue-2 0.01%, $color-maya-blue 90%, $color-transparent 50%);
     z-index: -1;
     border-radius: size(12px);
     transition: width 1s ease-in-out;
@@ -50,15 +49,30 @@
   &:focus {
     background-color: transparent;
     color: $color-default-white;
+
+    &::after {
+      width: 100%;
+      background-image: linear-gradient(to right, $color-default-white 0%, $color-cornflower-blue-2 0.01%, $color-maya-blue 90%, $color-transparent 50%);
+    }
   }
 
   &.input-checked {
-    background-image: linear-gradient(to right, $color-default-white 0%, $color-cornflower-blue-2 0.01%, $color-maya-blue 80%, $color-transparent 50%);
+    background-color: transparent;
     color: $color-default-white;
+
+    &::after {
+      width: 100%;
+      background-image: linear-gradient(to right, $color-default-white 0%, $color-cornflower-blue-2 0.01%, $color-maya-blue 80%, $color-transparent 50%);
+    }
   }
 
   &:active {
-    background-image: linear-gradient(270deg, $color-neon-blue 0%, $color-summer-sky 100%);
+    background-color: transparent;
     color: $color-default-white;
+
+    &::after {
+      width: 100%;
+      background-image: linear-gradient(270deg, $color-neon-blue 0%, $color-summer-sky 100%);
+    }
   }
 }
