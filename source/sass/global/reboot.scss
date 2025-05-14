@@ -19,6 +19,9 @@ html {
   font-family: $ff-manrope;
   color: $color-default-black;
 
+  @include vp-1439 {
+    font-size: $fz-default;
+  }
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -87,6 +90,7 @@ select {
 
 // ie11 X removal
 input {
+
   &::-ms-clear,
   &::-ms-reveal {
     display: none;
