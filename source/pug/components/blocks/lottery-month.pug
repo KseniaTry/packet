@@ -20,6 +20,8 @@ mixin lottery-month()
             imagePath: "slides/lottery-month/slide1",
             imageName: "tv",
             imageType: "png",
+            imageWidth: 156,
+            imageHeight: 115,
             imageAlt: "Изображение телевизора",
           },
           {
@@ -37,6 +39,8 @@ mixin lottery-month()
             imagePath: "slides/lottery-month/slide2",
             imageName: "stars",
             imageType: "png",
+            imageWidth: 156,
+            imageHeight: 102,
             imageAlt: "Изображение улыбающейся зеленой звезды",
           }
         ]
@@ -59,6 +63,8 @@ mixin lottery-month()
             imagePath: "slides/lottery-month/slide3",
             imageName: "vacum-cleaner",
             imageType: "png",
+            imageWidth: 156,
+            imageHeight: 130,
             imageAlt: "Изображение беспроводного пылесоса",
           },
           {
@@ -76,6 +82,8 @@ mixin lottery-month()
             imagePath: "slides/lottery-month/slide4",
             imageName: "coin",
             imageType: "png",
+            imageWidth: 156,
+            imageHeight: 102,
             imageAlt: "Изображение улыбающейся золотой монеты",
           }
         ]
@@ -85,12 +93,11 @@ mixin lottery-month()
   section.lottery-month
     +lottery-block(lotteryMonthCards, "Разыгрываем<br> в сентябре")
     .container.lottery-month__form-wrapper
-      form.lottery-month__form(method="post", action="")
+      form.lottery-month__form(method="post", action="#")
         .custom-checkbox.lottery-month__checkbox-wrapper
           input.custom-checkbox__input.lottery-month__input(type="checkbox", id="agreement-2", name="agreement-2", data-class="agreement-input", required)
           label.custom-checkbox__label.lottery-month__label(for="agreement-2")
-            |Я согласен на
-            a.custom-checkbox__link(href="#")
-              p участие в акции
+            |Я согласен на&nbsp;
+            a.custom-checkbox__link(href="#") участие в акции
         button.btn.lottery-month__button(type="button", aria-label="Принять участие")= "Принять участие"
 

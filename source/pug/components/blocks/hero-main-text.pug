@@ -9,7 +9,6 @@ mixin hero-main-text()
       .custom-checkbox.hero__checkbox-wrapper
         input.custom-checkbox__input.hero__input(type="checkbox", id="agreement", name="agreement", data-class="agreement-input", required)
         label.custom-checkbox__label.hero__label(for="agreement")
-          |Я согласен на
-          a.custom-checkbox__link(href="#")
-            p участие в акции
+          |Я согласен на&nbsp;
+          a.custom-checkbox__link(href="#") участие в акции
       button.btn.hero__button(type="button", aria-label="Принять участие")= "Принять участие"

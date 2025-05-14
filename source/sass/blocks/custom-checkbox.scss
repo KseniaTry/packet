@@ -42,7 +42,6 @@
   z-index: 5;
   width: size(20px);
   height: size(20px);
-
   opacity: 0%;
 }
 
@@ -50,10 +49,6 @@
   color: $color-accent-main;
   text-decoration: underline;
   font-size: size(18px);
-
-  p {
-    display: inline;
-  }
 
   &:hover,
   &:focus {

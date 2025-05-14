@@ -43,8 +43,8 @@ mixin winners-list()
     .container.winners-list__main-wrapper
       h2 Список победителей
       .winners-list__buttons-wrapper
-        +btn.winners-list__button({tag: "button", text: "Еженедельные", type: "button"})
-        +btn.winners-list__button({tag: "button", text: "Розыгрыш в сентябре", type: "button"})
+        +btn({tag: "button", text: "Еженедельные", type: "button"}).winners-list__button
+        +btn({tag: "button", text: "Розыгрыш в сентябре", type: "button"}).winners-list__button
       form.winners-list__form
         .new-custom-select(data-class="custom-select-wrapper")
           for winners in winnersList
