@@ -81,6 +81,7 @@ const initPhoneSearch = () => {
       searchButton.classList.remove('is-opened');
       searchButton.classList.remove('incorrect');
       searchButton.classList.remove('correct');
+      renderWinnersList(activeOption, winners);
     }
 
     evt.preventDefault();
