@@ -11,6 +11,7 @@ const REGEX_PHONE = /[^0-9]/;
 
 // валидация
 const validatePhone = () => {
+
   phoneSearchInput.addEventListener('input', (evt) => {
     const phoneInputValue = evt.target.value;
     const phoneInputLength = String(phoneSearchInput.value).length;
@@ -41,6 +42,11 @@ const initPhoneSearch = () => {
     return;
   }
 
+  if (phoneSearchInput.value = "") {
+    searchText.style.color = '#989898';
+    searchText.textContent = 'Введите последние 4 цифры номера телефона';
+  }
+
   const activeOptionData = winners.find((winner) => winner.id == activeOption.dataset.id);
   const winnersList = activeOptionData.phoneNumbers;
   const activeWinnersShortNumbers = winnersList.map((winner) => winner.nubmer.slice(-4));
@@ -49,29 +55,32 @@ const initPhoneSearch = () => {
     const searchResult = activeWinnersShortNumbers.find((shortNumber) => shortNumber === phoneSearchInput.value);
     const phoneInputLength = String(phoneSearchInput.value).length;
 
-    if (searchButton.classList.contains('is-opened')) {
+    if (!searchButton.classList.contains('is-opened')) {
+      if (phoneInputLength < 4) {
+        return;
+      } else {
+        if (searchResult != undefined) {
+          const resultNumberIndex = activeWinnersShortNumbers.indexOf(searchResult);
+          const resultWinnerInfo = [];
+          resultWinnerInfo.push(winnersList[resultNumberIndex])
+          renderSearchResult(resultWinnerInfo);
+          searchButton.classList.add('is-opened');
+          searchButton.classList.add('correct'); // для перекраски цвета текста в стилях
+        } else {
+          searchText.textContent = 'Номер не найден';
+          searchText.style.color = '#FF5200';
+          phoneSearchInput.style.color = '#FF5200';
+          searchButton.classList.add('is-opened');
+          searchButton.classList.add('incorrect'); // для перекраски цвета текста в стилях
+        }
+      }
+    } else {
       phoneSearchInput.value = "";
       searchText.style.color = '#989898';
       searchText.textContent = 'Введите последние 4 цифры номера телефона';
-    }
-
-    if (phoneInputLength < 4) {
-      return;
-    } else {
-      if (searchResult != undefined) {
-        const resultNumberIndex = activeWinnersShortNumbers.indexOf(searchResult);
-        const resultWinnerInfo = [];
-        resultWinnerInfo.push(winnersList[resultNumberIndex])
-        renderSearchResult(resultWinnerInfo);
-        searchButton.classList.toggle('is-opened');
-        searchButton.classList.toggle('correct'); // для перекраски цвета текста в стилях
-      } else {
-        searchText.textContent = 'Номер не найден';
-        searchText.style.color = '#FF5200';
-        phoneSearchInput.style.color = '#FF5200';
-        searchButton.classList.toggle('is-opened');
-        searchButton.classList.toggle('incorrect'); // для перекраски цвета текста в стилях
-      }
+      searchButton.classList.remove('is-opened');
+      searchButton.classList.remove('incorrect');
+      searchButton.classList.remove('correct');
     }
 
     evt.preventDefault();
