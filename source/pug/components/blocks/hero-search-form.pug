@@ -8,5 +8,6 @@ mixin hero-search-form()
           input.hero__search-input(type="text", id="phone-search", name="phone-search", maxlength="4")
           button.hero__search-button(type="submit", data-class="search-button", aria-label="Поиск четырех последних цифр номера телефона победителя")
             span.hero__search-icon-wrapper
-              +icon("icon-search", 30, 30)
+              +icon("icon-search", 30, 30).hero__search-icon
+              +icon("close", 30, 30).hero__close-icon
       p(data-class="search-text") Введите последние 4 цифры номера телефона

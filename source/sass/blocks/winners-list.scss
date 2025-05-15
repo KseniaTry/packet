@@ -1,6 +1,10 @@
 .winners-list {
   padding: size(15px) 0 size(22px);
 
+  @include vp-767 {
+    padding-top: 0;
+  }
+
   &__main-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -136,7 +140,7 @@
     table-layout: fixed;
 
     @include vp-767 {
-      max-height: 669px;
+      max-height: 680px;
     }
   }
 
@@ -171,7 +175,7 @@
     width: 11.4%;
 
     @include vp-767 {
-      width: 100px;
+      width: 29%;
     }
   }
 
@@ -179,7 +183,7 @@
     width: 6%;
 
     @include vp-767 {
-      width: 120px;
+      width: 30%;
     }
   }
 
@@ -187,7 +191,7 @@
     width: 43%;
 
     @include vp-767 {
-      width: 105px;
+      width: 31%;
     }
   }
 

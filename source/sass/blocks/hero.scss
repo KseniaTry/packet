@@ -181,6 +181,10 @@
       width: 100%;
       order: 3;
     }
+
+    @include vp-767 {
+      padding: 0;
+    }
   }
 
   &__search-form {
@@ -274,6 +278,8 @@
 
   &__search-button {
     position: absolute;
+    display: flex;
+    align-items: center;
     top: size(25px);
     right: size(33px);
     width: size(30px);
@@ -312,6 +318,32 @@
         height: 20px;
       }
     }
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5ms ease-in-out;
+    color: $color-cornflower-blue;
+  }
+
+  &__search-button.is-opened .hero__close-icon {
+    opacity: 1;
+    color: $color-international-orange;
+  }
+
+  &__search-button.is-opened.incorrect .hero__close-icon {
+    color: $color-international-orange;
+  }
+
+  &__search-button.is-opened.correct .hero__close-icon {
+    color: $color-cornflower-blue;
+  }
+
+  &__search-button.is-opened .hero__search-icon {
+    opacity: 0;
   }
 
   // изображение
