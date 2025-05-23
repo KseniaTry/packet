@@ -94,6 +94,10 @@
       width: 342px;
       margin: 0 auto;
     }
+
+    @include vp-374 {
+      width: auto;
+    }
   }
 
   &__swiper-wrapper {

@@ -6,6 +6,10 @@
   color: $color-nero;
   border-radius: size(12px);
 
+  @include vp-374 {
+    width: auto;
+  }
+
   &__text-wrapper {
     display: flex;
     flex-wrap: wrap;

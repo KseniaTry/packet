@@ -15,6 +15,10 @@
   color: $color-accent-main;
   cursor: pointer;
 
+  @include vp-374 {
+    font-size: 16px;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -51,6 +55,10 @@
   color: $color-accent-main;
   text-decoration: underline;
   font-size: size(18px);
+
+  @include vp-374 {
+    font-size: 16px;
+  }
 
   &:hover,
   &:focus {
