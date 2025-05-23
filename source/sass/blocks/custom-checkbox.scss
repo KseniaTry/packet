@@ -13,6 +13,7 @@
   line-height: 135%;
   letter-spacing: -0.02em;
   color: $color-accent-main;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -42,7 +43,8 @@
   z-index: 5;
   width: size(20px);
   height: size(20px);
-  opacity: 0%;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .custom-checkbox__link {
