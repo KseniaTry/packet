@@ -14,13 +14,6 @@ const initLotterySwiper = (slider) => {
       loop: true,
       loopedSlides: 1,
       allowTouchMove: true,
-    //   breakpoints: {
-    //     // when window width is >= 320px
-    //     320: {
-    //       slidesPerView: 1,
-    //       spaceBetween: 20,
-    //     },
-    // },
   });
 };
 

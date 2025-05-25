@@ -128,7 +128,7 @@
     width: size(480px);
 
     @include vp-1439 {
-      width: 55%;
+      width: 42%;
     }
 
     @include vp-1023 {
@@ -140,6 +140,7 @@
     p {
       margin: 0;
       margin-bottom: 40px;
+      line-height: size(32px);
 
       @include vp-767 {
         margin-top: -2px;
@@ -349,11 +350,11 @@
   // изображение
   &__image-wrapper {
     position: absolute;
-    top: 0;
-    right: size(41px);
+    top: size(44px);
+    right: size(51px);
 
-    width: size(654px);
-    height: size(649px);
+    width: size(630px);
+    height: size(580px);
 
     @include vp-1439 {
       width: 550px;
@@ -368,8 +369,8 @@
     }
 
     img {
-      width: size(654px);
-      height: size(649px);
+      width: size(630px);
+      height: size(580px);
       object-fit: contain;
 
       @include vp-1439 {
