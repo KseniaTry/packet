@@ -7,7 +7,7 @@ const mobileButtonColorChange = () => {
     input.addEventListener('change', (evt) => {
       const form = evt.target.closest('FORM');
       const button = form.querySelector('.btn');
-      button.removeAttribute('disabled');
+      button.classList.toggle('disabled');
       button.classList.toggle('input-checked');
     });
   });
@@ -18,7 +18,7 @@ const makeButtonActive = () => {
     input.addEventListener('change', (evt) => {
       const form = evt.target.closest('FORM');
       const button = form.querySelector('.btn');
-      button.removeAttribute('disabled');
+      button.classList.toggle('disabled')
     });
   });
 }
